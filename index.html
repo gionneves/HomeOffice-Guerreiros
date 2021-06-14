@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+		<title>Guerreiros Home-Office</title>
+	</head>
+	<body>
+		<section class="hero is-small is-danger">
+			<div class="hero-body">
+				<p class="title">Guerreiros Multi</p>
+				<p class="subtitle">Sistema de Home-Office <small>novo</small></p>
+			</div>
+		</section>
+		<div class="container my-3">
+			<form class="form m-4" action="core/login.php" method="POST">
+				<div class="content">
+					<label class="label" for="login">Login:</label>
+					<input class="input" type="text" name="login" id="login" required />
+				</div>
+				<div class="content">
+					<label class="label" for="senha">Senha:</label>
+					<input class="input" type="password" name="senha" id="senha" required />
+				</div>
+				<div class="columns is-centered is-mobile mb-4">
+					<button type="submit" class="button is-success mx-2" id="btnLogin">Entrar</button>
+					<button type="button" class="button is-outlined is-dark mx-2" id="limpar">Limpar</button>
+				</div>
+			</form>
+		</div>
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Guerreiros Multi</strong><br />
+					Guerreiro até dentro de casa!
+					<br />
+					<br />
+					<small>
+						sistema feito por <a href="https://github.com/gionneves" target="_blank">Giovanni Neves Sadauscas</a>
+					</small>
+				</p>
+			</div>
+		</footer>
+		<script src="sistema/js/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#limpar").click(function () {
+					$("input").val("");
+				});
+			});
+		</script>
+	</body>
+</html>

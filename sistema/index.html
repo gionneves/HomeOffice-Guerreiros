@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+		<title>Guerreiros Home-Office</title>
+	</head>
+	<body>
+		<div class="columns">
+			<div class="column has-text-centered m-6">
+				<span id="clock" class="title is-2"></span>
+
+				<br />
+				<form class="mt-3" action="../core/check.php">
+					<button id="check" type="submit" class="button is-large is-danger" disabled>Check</button>
+				</form>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Guerreiros Multi</strong><br />
+					Guerreiro até dentro de casa!
+					<br />
+					<br />
+					<small>
+						sistema feito por <a href="https://github.com/gionneves" target="_blank">Giovanni Neves Sadauscas</a>
+					</small>
+				</p>
+			</div>
+		</footer>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script>
+			new Date($.now());
+			$("#clock")
+				.countdown($.now() + 1200000, function (event) {
+					$(this).html(event.strftime("%M:%S"));
+				})
+				.on("finish.countdown", function () {
+					$("#check").prop("disabled", false);
+					$("#check").removeClass("is-danger").addClass("is-link");
+				});
+		</script>
+	</body>
+</html>

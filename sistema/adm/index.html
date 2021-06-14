@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar is-danger">
+				<div class="navbar-brand">
+					<h1 class="navbar-item">Administrador</h1>
+				</div>
+				<div class="navbar-end">
+					<a href="index.html" class="navbar-item">Todos Checks</a>
+					<!-- <a href="cadastro.html" class="navbar-item">Cadastrar Funcionario</a> -->
+				</div>
+			</nav>
+		</header>
+		<div class="title has-text-centered m-4">
+			<h1 class="size-1">Todos checks</h1>
+		</div>
+
+		<div id="todoscheck" class="container p-4"></div>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Guerreiros Multi</strong><br />
+					Guerreiro até dentro de casa!
+					<br />
+					<br />
+					<small>
+						sistema feito por
+						<a href="https://github.com/gionneves" target="_blank">Giovanni Neves Sadauscas</a>
+					</small>
+				</p>
+			</div>
+		</footer>
+		<script src="../js/jquery-3.6.0.min.js"></script>
+		<script>
+			$("#todoscheck").load("../../core/verchecks.php");
+		</script>
+	</body>
+</html>
